@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthenticateResponse xmlns="http://citrix.com/authentication/response/1">
+<Status>success</Status>
+<Result>more-info</Result>
+<StateContext></StateContext>
+<AuthenticationRequirements>
+<PostBack>/nf/auth/doAuthentication.do</PostBack>
+<CancelPostBack>/nf/auth/doLogoff.do</CancelPostBack>
+<CancelButtonText>Cancel</CancelButtonText>
+<Requirements>
+<Requirement><Credential><Type>none</Type></Credential><Label><Text>Please log on</Text><Type>heading</Type></Label><Input/></Requirement>
+<Requirement><Credential><ID>login</ID><SaveID>ExplicitForms-Username</SaveID><Type>username</Type></Credential><Label><Text>User name:</Text><Type>plain</Type></Label><Input><AssistiveText>Please supply either domain\username or user@fully.qualified.domain</AssistiveText><Text><Secret>false</Secret><ReadOnly>false</ReadOnly><InitialValue></InitialValue><Constraint>.+</Constraint></Text></Input></Requirement>
+<Requirement><Credential><ID>passwd</ID><SaveID>ExplicitForms-Password</SaveID><Type>password</Type></Credential><Label><Text>Password:</Text><Type>plain</Type></Label><Input><Text><Secret>true</Secret><ReadOnly>false</ReadOnly><InitialValue></InitialValue><Constraint>.+</Constraint></Text></Input></Requirement>
+<Requirement><Credential><Type>none</Type></Credential><Label><Text>Please provide your credentials to continue...</Text><Type>information</Type></Label><Input/></Requirement>
+<Requirement><Credential><ID>loginBtn</ID><Type>none</Type></Credential><Label><Type>none</Type></Label><Input><Button>Log On</Button></Input></Requirement>
+</Requirements>
+</AuthenticationRequirements>
+</AuthenticateResponse>
